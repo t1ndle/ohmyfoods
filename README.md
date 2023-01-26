@@ -1,1 +1,1 @@
-# ohmyfood project where I will showcase my project of developing a website for ohmyfood
+Click [here](file:///C:/Users/tindle/Desktop/Openclassroom/Project%202/Homepage.html) to go to my Ohmyfood website. 
