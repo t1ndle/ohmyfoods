@@ -6,13 +6,17 @@ $color-primary:#9356DC;
 $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
 
+$breakpoints: (
+    medium:600px,
+    large: 820px
+);
+
 
 
 
 @mixin hover-lift() {
     box-shadow: 0px 2px 5px #000;
-    
-    &:hover{
+     &:hover{
 
         box-shadow:0px 4px 8px #000;
         transform:scale(1.1,1.1);
@@ -21,11 +25,7 @@ $color-tertiary:#99E2D0;
         box-shadow:0px 4px 8px #000;
         transform:scale(1.1,1.1);
     }
-
 }
-
-
-
 
 @mixin button-style(){
     cursor: pointer;
@@ -42,6 +42,12 @@ $color-tertiary:#99E2D0;
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+@mixin media-query($media-size) {
+    @media screen and (min-width:map-get($breakpoints, $media-size)){
+        @content;
+    }
 }
 
 
@@ -74,9 +80,15 @@ h1{
 
     margin-top: 20px;
 }
-h1, h2 {
+h1{
     font-size: 24px;
     font-weight: 700;
+}
+
+h2{
+
+    font-size: 16px;
+    font-weight: 400;
 }
 h3, h4, b {
     font-weight: 700;
@@ -205,8 +217,8 @@ body {
 
 .intro-text {
         height: 18vh; /* 15% of the viewport height */
-        min-height: 250px;
-        max-height: 400px;
+        min-height: 200px;
+        max-height: 300px;
         margin: 0 auto;
         @include center-align();
         @include flexC();
@@ -231,32 +243,49 @@ body {
 
 /* ----------- How it works section ------------ */
 
-.section-1{
+.section_1{
 
     @include center-align();
     @include flexC();
     height: 380px;
     gap:30px;
     background-color: $color-white;
+    @include media-query(large) {
+        flex-flow: row;
+        justify-content: space-around;
+        padding-left: 0;
+    }
 
 }
 
-.instructions{
+.s1_instructions{
 
     @include center-align();
     @include hover-lift();
     background-color: $color-grey;
     width: 85%;
+    max-width: 450px;
     height: 60px;
     display: flex;
     flex-direction: row;
     gap:15px;
     white-space: nowrap;
     border-radius: 12px;
-    
+    @include media-query(large) {
+        flex-flow: row;
+        justify-content: space-around;
+        min-width: 300px;
+        max-width: 400px;
+        padding-left: 0;
+    }    
+    &:hover, &--active{
+    i {
+        color: $color-primary;
+    }
+    }
 }
 
-.instructions{
+.s1_instructions{
 
 &:hover{
     background-color:rgba(177, 8, 255, .1);
@@ -267,21 +296,12 @@ body {
 
 }
 
-.instructions i{
+.s1_instructions i{
 
     color: $color-footer;
 }
 
-.instructions i{
 
-&:hover{
-
-    color: $color-primary;
-}
-&:focus{
-    color: $color-primary;
-}
-}
 
 .fa-1, .fa-2, .fa-3{
 
@@ -412,6 +432,7 @@ font-weight: 300;
 
 .footer {
 
+    text-align: left;
     background-color: $color-footer;
     padding: 1.5em 0 2em 1.5em;
     line-height: 1.5em;
