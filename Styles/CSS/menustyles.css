@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  --menu-item1-time:700ms;
+  --menu-item2-time:var(--menu-item1-time)+50ms;
+  --menu-item3-time:var(--menu-item1-time)+100ms;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h2 {
+  font-size: 16px;
+  font: weight 300px;
+  -webkit-text-decoration: underline greenyellow 3px;
+          text-decoration: underline greenyellow 3px;
+}
+
+h3, h4, b {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+p {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+/* ------------------ Navigation Header --------------------- */
+.nav-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo {
+  align-items: center;
+  margin: auto;
+}
+
+.logo img {
+  width: 180px;
+  margin: 20px 0;
+}
+
+i.fa-arrow-left {
+  margin-left: 20px;
+}
+
+/*----------------- Main Section -------------------------*/
+.main_section h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.main_section {
+  display: block;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.menu_image {
+  position: relative;
+  z-index: -1;
+}
+.menu_image img {
+  height: 35vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu_image img {
+  padding: 0;
+  display: block;
+  margin: 0;
+  max-width: 100%;
+  max-height: auto;
+}
+
+.ms_title {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0;
+  padding: 0px 20px;
+  gap: 80px;
+  align-items: center;
+}
+
+/* ------------------- Entrees Main Dessert ------------------*/
+.menu_section {
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+  background-color: #F1F1F1;
+  margin-top: -50px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column;
+  padding: 0 15px 60px 15px;
+  height: auto;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu_card {
+  margin: 10px 0;
+  padding: 0;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  float: left;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0px 3px 8px #000;
+  transition: all 300ms ease-in-out;
+  -webkit-animation: menu-load 1000ms ease-in 200ms;
+          animation: menu-load 1000ms ease-in 200ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.menu_card:hover {
+  box-shadow: 0px 8px 30px #000;
+  width: 102%;
+  height: 102%;
+}
+
+.menu_card h4 {
+  float: right;
+  display: inline;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.menu_card h3, p {
+  margin: 5px 0 0 5px;
+}
+
+.minor_section {
+  max-width: 480px;
+  align-items: center;
+  margin: 0 15px;
+  -webkit-animation: menu-load 1000ms ease-in 200ms;
+          animation: menu-load 1000ms ease-in 200ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.minor_section:nth-child(2) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.minor_section:nth-child(3) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.minor_section:nth-child(4) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+/* -------Animation for tick select box -------------*/
+.menu_card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -2;
+  background-color: #99E2D0;
+  transition: transform 800ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.menu_card:hover::before,
+.menu_card:focus::before {
+  transform: scaleX(0.18);
+}
+
+/* --------------------- Animation for tick ------------------ */
+.menu_card i::before {
+  position: absolute;
+  right: -12px;
+  top: 35%;
+  font-size: 150%;
+  opacity: 0;
+  color: white;
+}
+
+.menu_card:hover i::before,
+.menu_card:focus i::before {
+  -webkit-animation: rightleft 500ms ease-in both;
+          animation: rightleft 500ms ease-in both;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+@-webkit-keyframes rightleft {
+  0% {
+    transform: translateX(0%) rotate(0deg);
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-30px) rotate(360deg);
+    opacity: 100%;
+  }
+}
+
+@keyframes rightleft {
+  0% {
+    transform: translateX(0%) rotate(0deg);
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-30px) rotate(360deg);
+    opacity: 100%;
+  }
+}
+.menu_card h4 {
+  transition: all 0.8s ease-in-out;
+  transform: translateX(0%);
+}
+
+.menu_card:hover h4 {
+  transform: translateX(-250%);
+}
+
+.menu_card h3, p {
+  transition: all 0.8s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.menu_card:hover h3, p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80%;
+}
+
+/*------------------------- Animated Heart -------------------------- */
+.ResHeartMove {
+  border: none;
+  background-color: inherit;
+  position: relative;
+  font-size: 1.5rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.ResHeartMove__bottom {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.ResHeartMove:focus .ResHeartMove__bottom, .ResHeartMove:hover .ResHeartMove__bottom, .ResHeartMove:active .ResHeartMove__bottom {
+  opacity: 0;
+}
+
+.ResHeartMove:focus .ResHeartMove__top, .ResHeartMove:hover .ResHeartMove__top, .ResHeartMove:active .ResHeartMove__top {
+  opacity: 1;
+}
+
+.ResHeartMove__top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.ResHeartMove .far {
+  display: block;
+}
+
+.ResHeartMove .fas {
+  display: block;
+  background: -webkit-linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --------------------- Order button --------------*/
+.b-explore {
+  padding: 12px 50px;
+  border-radius: 20px;
+  border: 0px;
+  color: #ffffff;
+  cursor: pointer;
+  background: #9356DC;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  margin-bottom: 30px;
+  box-shadow: 0px 3px 8px #000;
+}
+
+/* ---------------------------- Nav-footer ---------------------------- */
+.footer {
+  text-align: left;
+  background-color: #252525;
+  padding: 1.5em 0 2em 1.5em;
+  line-height: 1.5em;
+  min-height: 200px;
+  position: relative;
+  width: 100%;
+}
+.footer * {
+  color: #ffffff;
+  list-style: none;
+}
+.footer img {
+  filter: invert(1);
+  width: 120px;
+  padding-bottom: 10px;
+}
+.footer i {
+  width: 25px;
+}
+
+/* -------------------- Loading Animation --------------------- */
+@-webkit-keyframes menu-load {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes menu-load {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=menustyles.css.map */
