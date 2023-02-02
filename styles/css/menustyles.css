@@ -27,7 +27,7 @@ a {
 
 h2 {
   font-size: 16px;
-  font: weight 300px;
+  font-weight: 300;
   -webkit-text-decoration: underline greenyellow 3px;
           text-decoration: underline greenyellow 3px;
 }
@@ -94,7 +94,7 @@ i.fa-arrow-left {
   display: block;
   margin: 0;
   max-width: 100%;
-  max-height: auto;
+  max-height: fit-content;
 }
 
 .ms_title {
