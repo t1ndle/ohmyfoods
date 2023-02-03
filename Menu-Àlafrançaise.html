@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,136 +9,145 @@
     <link rel="stylesheet" href="styles/css/menustyles.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/738db8913d.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+    <header class="nav-header">
+        <a href="index.html"><i class="fa-solid fa-arrow-left"></i> </a>
+            <div class="logo"><a href="#"><img src="images/logo/ohmyfood.png" alt="Company logo of ohmyfood">
+            </div>
+        </a>
+            
+    </header>
 
-<header class="nav-header">
-<a href="index.html"><i class="fa-solid fa-arrow-left"></i> </a>
-<div class="logo"><a href="#"><img src="images/logo/ohmyfood.png" alt="Company logo of ohmyfood" ></a> </div>
-</header>
+    <main>
+        <section class="main_section">
+            <div class="menu_image">
+                <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Menu items from Bastille">
+            </div>
 
-<main>
+            <section class="menu_section">
+                <section class="ms_title">
+                    <h1>Bastille</h1>
+                        <div role="button" class="ResHeartMove" onclick="void(0)" title="Add to favorites">
+                            <div class="ResHeartMove__bottom"><i class="far fa-heart"></i></div>
+                            <div class="ResHeartMove__top"><i class="fas fa-heart"></i></div>
+                        </div>
+                </section>
 
-<section class="main_section">
+                <section class="minor_section">
+                    <h2>Entrees</h2>
+                        <a href="#">
+                            <div class="menu_card">
+                                <h3>Citrus Squid Carpaccio</h3>
+                                    <p>With orange zest</p>
+                                        <h4>25Є</h4>
+                                            <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </a>
+                    
 
-<div class="menu_image">
-<img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Menu items from Bastille">
-</div>
+                            <a href="#">
+                                <div class="menu_card">
+                                    <h3>Grandmothers vegetable soup</h3>
+                                        <p>Carrots,parsnips,Jerusalem artichoke</p>
+                                            <h4>35Є</h4>
+                                                <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                            </a>
 
+                            <a href="#">
+                                <div class="menu_card">
+                                    <h3>Onion Soup</h3>
+                                        <p>Revisted</p>
+                                            <h4>20Є</h4>
+                                                <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                            </a>
+                </section>
 
+        <section class="minor_section">
+            <h2>MAIN DISH</h2>
+                <a href="#">
+                    <div class="menu_card">
+                        <h3>Scallops</h3>
+                            <p>With mashed parsnip</p>
+                                <h4>40Є</h4>
+                                    <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </a>
 
+                <a href="#">
+                    <div class="menu_card">
+                        <h3>Magret de canard</h3>
+                            <p>With mashed potatoes</p>
+                                <h4>35Є</h4>
+                                    <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </a>
 
-<section class="menu_section">
+                <a href="#">
+                    <div class="menu_card">
+                        <h3>Game Hen</h3>
+                            <p>With vegetable gnocchis</p>
+                                <h4>44Є</h4>
+                                    <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </a>
 
-<section class="ms_title">
+        </section>
 
-<h1>Bastille</h1>
+        <section class="minor_section">
+            <h2>DESSERTS</h2>
+                <a href="#">
+                    <div class="menu_card">
+                        <h3>Floral Icecream</h3>
+                            <p>With hazelnut butter</p>
+                                <h4>18Є</h4>
+                                    <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </a>
 
-<div role="button" class="ResHeartMove" onclick="void(0)" title="Add to favorites">
-<div class="ResHeartMove__bottom"><i class="far fa-heart"></i></div>
-<div class="ResHeartMove__top"><i class="fas fa-heart"></i></div>
-</div>  
+            <a href="#">
+                <div class="menu_card">
+                    <h3>Chocolate lava cake</h3>
+                        <p>Revisited</p>
+                            <h4>22Є</h4>
+                                <i class="fa-solid fa-circle-check"></i>
+                </div>
+            </a>
 
-</section>
+            <a href="#">
+                <div class="menu_card">
+                    <h3>Napolean</h3>
+                        <p>With blueberries and marzipan</p>
+                            <h4>23Є</h4>
+                                <i class="fa-solid fa-circle-check"></i>
+                </div>
+            </a>
+        </section>
 
-<section class="minor_section">
-<h2>Entrees</h2>
+        <button class="b-explore" type="submit">
+            <span>Order</span>
+        </button>
 
-<a href="#"><div class="menu_card">
-<h3>Citrus Squid Carpaccio</h3>
-<p>With orange zest</p><h4>25Є</h4>
-<i class="fa-solid fa-circle-check"></i>
-</div>
-</a>
-
-<a href="#"><div class="menu_card">
-<h3>Grandmothers vegetable soup</h3>
-<p>Carrots,parsnips,Jerusalem artichoke</p><h4>35Є</h4>
-<i class="fa-solid fa-circle-check"></i>
-</div>
-</a>
-
-<a href="#"><div class="menu_card">
-<h3>Onion Soup</h3>
-<p>Revisted</p><h4>20Є</h4>
-<i class="fa-solid fa-circle-check"></i>
-</div>
-</a>
-
-</section>
-
-<section class="minor_section">
-<h2>MAIN DISH</h2>
+            </section>
+        </section>
+    </main>
     
-<a href="#"><div class="menu_card">
-<h3>Scallops</h3>
-<p>With mashed parsnip</p><h4>40Є</h4>
-<i class="fa-solid fa-circle-check"></i>
-</div>
-</a>
-    
-<a href="#"><div class="menu_card">
-<h3>Magret de canard</h3>
-<p>With mashed potatoes</p><h4>35Є</h4>
-<i class="fa-solid fa-circle-check"></i>
-</div>
-</a>
-    
-<a href="#"><div class="menu_card">
-<h3>Game Hen</h3>
-<p>With vegetable gnocchis</p><h4>44Є</h4>
-<i class="fa-solid fa-circle-check"></i>
-</div>
-</a>
-    
-</section>
-
-<section class="minor_section">
-<h2>DESSERTS</h2>
-    
-<a href="#"><div class="menu_card">
-<h3>Floral Icecream</h3>
-<p>With hazelnut butter</p><h4>18Є</h4>
-<i class="fa-solid fa-circle-check"></i>
-</div>
-</a>
-    
-<a href="#"><div class="menu_card">
-<h3>Chocolate lava cake</h3>
-<p>Revisited</p><h4>22Є</h4>
-<i class="fa-solid fa-circle-check"></i>
-</div>
-</a>
-    
-<a href="#"><div class="menu_card">
-<h3>Napolean</h3>
-<p>With blueberries and marzipan</p><h4>23Є</h4>
-<i class="fa-solid fa-circle-check"></i>
-</div>
-</a>
-    
-</section>
-
-
-<button class="b-explore" type="submit">
-<span>Order</span>
-</button>
-
-</section>
-</section>
-</main>
-<footer class="footer">
-    <div class="footer_logo"><a href="#"><img src="images/logo/ohmyfood.png" alt="ohmyfood logo"></a> </div>
-    <nav class="footer_nav">
-        <ul>
-            <li><a href="#"><i class="fa-solid fa-utensils"></i>Suggest a restaurant</a></li>
-            <li><a href="#"><i class="fa-solid fa-handshake-angle"></i>Become a partner</a></li>
-            <li><a href="#">Legal</a></li>
-            <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
-                </ul>
-            </nav>
-        </footer>
-    </body>
-</html>
+            <footer class="footer">
+                <div class="footer_logo"><a href="#"><img src="images/logo/ohmyfood.png" alt="ohmyfood logo"></a> </div>
+                    <nav class="footer_nav">
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-utensils"></i>Suggest a restaurant</a></li>
+                            <li><a href="#"><i class="fa-solid fa-handshake-angle"></i>Become a partner</a></li>
+                            <li><a href="#">Legal</a></li>
+                            <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
+                        </ul>
+                    </nav>
+            </footer>
+        </body>
+    </html>
